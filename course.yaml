@@ -1,0 +1,29 @@
+format: https://inclu.pub/source/0.1
+id: fd41e973-ffc0-4ba4-99f8-810c00498e42
+title: "Demokurs: Einführung in die Barrierefreiheit"
+language: de
+description: Demokurs zum Erproben des Kursformats, mit Inhalten aus dem Kurs „Einführung in die Barrierefreiheit“.
+level: introductory
+version: 1.0.0
+license: proprietary
+authors:
+  - tollwerk Academy
+publisher: tollwerk GmbH
+cover:
+  src: braille-display.jpg
+  alt: Hände auf einer Braillezeile vor einer Computertastatur
+subjects:
+  - Barrierefreiheit
+  - Digitale Barrierefreiheit
+audience:
+  - Menschen, die digitale Angebote planen, gestalten, schreiben oder entwickeln
+priorKnowledge: keine
+duration: PT1H30M
+accessibility:
+  summary: Alle Inhalte sind als Text zugänglich. Bilder haben Alternativtexte, Grafiken ausführliche Beschreibungen, Videos Untertitel und Transkripte, Audio Transkripte. Einzelne Abschnitte gibt es zusätzlich als Video, Audio und in Leichter Sprache, Glossarbegriffe auch in Gebärdensprache.
+message: Du hast den Demokurs abgeschlossen.
+modules:
+  - definition
+  - people
+assessments:
+  - course-assessment

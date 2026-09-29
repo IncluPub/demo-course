@@ -1,0 +1,20 @@
+id: f2bd225e-34e5-40fe-b34a-ca177293c741
+title: Definition und Bedeutung
+description: Was Barrierefreiheit bedeutet und wie sie gesetzlich definiert ist.
+objectives:
+  - key: definition
+    text: die zentralen Merkmale der allgemeinen Definition von Barrierefreiheit wiedergeben.
+    level: 1
+  - key: criteria
+    text: die drei Kriterien der gesetzlichen Definition nach § 4 BGG nennen und erläutern.
+    level: 2
+  - key: example
+    text: an einem Beispiel zeigen, welches Kriterium ein Angebot verletzt.
+    level: 2
+message: Du hast das Modul „Definition und Bedeutung“ abgeschlossen.
+units:
+  - module-intro
+  - general-definition
+  - legal-definition
+  - summary
+  - assessment

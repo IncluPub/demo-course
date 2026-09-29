@@ -1,0 +1,4 @@
+include:
+  - component: code.tollwerk.net/inclupub/compiler/course@v0.2.0
+    inputs:
+      version: 0.2.0

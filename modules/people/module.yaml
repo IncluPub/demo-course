@@ -1,0 +1,19 @@
+id: 78e39394-8f51-484b-b22f-af5468715c22
+title: Menschen mit Behinderungen
+description: Wie Lakshmi, die blind ist, digitale Angebote nutzt und welche Hilfsmittel sie braucht.
+objectives:
+  - key: barriers
+    text: anhand einer Persona typische digitale Barrieren für blinde Menschen erklären.
+    level: 2
+  - key: tools
+    text: die Arbeitsweise von Screenreader und Braillezeile beschreiben.
+    level: 2
+message: Du hast das Modul „Menschen mit Behinderungen“ abgeschlossen.
+units:
+  - module-intro
+  - seeing
+  - assistive-technology
+  - summary
+  - assessment
+  - colour-vision
+order: sequential

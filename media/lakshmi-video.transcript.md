@@ -1,0 +1,1 @@
+Lakshmi ist 51 und arbeitet als leitende Buchhalterin in einer Versicherung. Sie ist blind. Ein Screenreader liest ihr Inhalte und Bedienelemente vor. In einer neuen Online-Anwendung haben mehrere Schaltflächen keine Textalternativen. Lakshmi weiß deshalb nicht, wofür sie gedacht sind.
