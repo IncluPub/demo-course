@@ -20,13 +20,19 @@ The [source specification](https://code.tollwerk.net/inclupub/inclupub/-/blob/ma
 
 ## Build
 
-The pipeline validates the source and builds the package on every commit; the package is an artifact of the pipeline, not part of the repository. The job `inclupub:check` checks it with the checker of the specification and EPUBCheck. A tag `v<version>` publishes the package to the package registry of this project.
+The pipeline validates the source and builds the package on every commit; the package is an artifact of the pipeline, not part of the repository. The units are narrated with the default voice of the compiler, which the pipeline loads with its job token; this project is in the job token allowlist of [`inclupub/voice`](https://code.tollwerk.net/inclupub/voice). The job `inclupub:check` checks it with the checker of the specification and EPUBCheck. A tag `v<version>` publishes the package to the package registry of this project.
 
 Locally, with the image of the compiler:
 
 ```sh
 docker run --rm -v "$PWD:/builds" images.tollwerk.net/inclupub/compiler inclupub validate .
 docker run --rm -v "$PWD:/builds" images.tollwerk.net/inclupub/compiler inclupub build . --output demo-course.epub
+```
+
+With narration, the voice needs a personal access token with access to `inclupub/voice`:
+
+```sh
+docker run --rm -v "$PWD:/builds" -e INCLUPUB_VOICE_TOKEN images.tollwerk.net/inclupub/compiler inclupub build . --output demo-course.epub --narrate
 ```
 
 The skeleton of this repository was created with `inclupub new`.
