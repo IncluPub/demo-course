@@ -15,9 +15,11 @@ prerequisite:
     - objectiveMet: modules/people/module.yaml#barriers
 ---
 
+{#379pbl59}
+
 Farbfehlsichtige Menschen nehmen bestimmte Farben vermindert oder gar nicht wahr. Am häufigsten ist die Rot-Grün-Schwäche, von der etwa 8 Prozent der Männer und 0,5 Prozent der Frauen betroffen sind. Damit Informationen für sie zugänglich bleiben, dürfen Bedeutungen nicht allein über Farbe vermittelt werden, sondern müssen sich auch durch Beschriftung, Form oder Symbol erschließen.
 
-:::important
+:::important{#3lr1qvbz}
 
 Diese Lektion ist freiwillig. Sie wird freigeschaltet, wenn du die Lernerfolgskontrolle von Modul 1 mit mindestens 90 Prozent bestanden hast oder das erste Lernziel dieses Moduls erreicht ist.
 

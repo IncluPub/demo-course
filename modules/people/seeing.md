@@ -11,29 +11,33 @@ objectives:
     level: 2
 ---
 
+{#xo4jdipy}
+
 Das Sehvermögen umfasst ein breites Spektrum, von voller Sehkraft über leichte Einschränkungen bis hin zur vollständigen Blindheit. Anders als eine einfache Fehlsichtigkeit lässt sich eine Sehbehinderung mit Brille oder Kontaktlinsen nicht oder nur teilweise ausgleichen.
 
 ::::variant-group[Lakshmi, Buchhalterin und blind]{#lakshmi objectives=#blind-barriers}
 
 :::variant{#text}
 
-::persona{ref=personas/lakshmi.md}
+::persona{#8f8wa0t7 ref=personas/lakshmi.md}
 
 :::
 
 :::variant{#video}
 
-::video[Lakshmi bei der Arbeit (Platzhalter mit synthetischer Stimme)]{src=lakshmi-video.mp4}
+::video[Lakshmi bei der Arbeit (Platzhalter mit synthetischer Stimme)]{#4ce7feoa src=lakshmi-video.mp4}
 
 :::
 
 :::variant{#audio}
 
-::audio[Lakshmi, Buchhalterin und blind (Platzhalter mit synthetischer Stimme)]{src=lakshmi-audio.mp3}
+::audio[Lakshmi, Buchhalterin und blind (Platzhalter mit synthetischer Stimme)]{#zqrbytxl src=lakshmi-audio.mp3}
 
 :::
 
 :::variant{#easy language-level=easy}
+
+{#1gg3klse}
 
 Das ist Lakshmi.
 
@@ -47,13 +51,15 @@ Manche Knöpfe haben keinen Namen. Dann weiß Lakshmi nicht, was der Knopf macht
 
 ::::
 
+{#n0f2zp7q}
+
 ## Wer profitiert von Barrierefreiheit?
 
 **Blinde Menschen** greifen mithilfe eines Screenreaders auf Webinhalte zu, häufig kombiniert mit einer [Braillezeile](../../glossary/braille-display.md). Damit das funktioniert, müssen Inhalte durch eine logische Überschriftenstruktur gegliedert, Bilder mit Alternativtexten beschrieben und Bedienelemente eindeutig benannt sein.
 
-::image[Screenreader und Braillezeile am Arbeitsplatz.]{src=braille-workplace.jpg alt="Eine Frau mit Kopfhörern um den Hals hält ein Smartphone ans Ohr. Vor ihr stehen ein Bildschirm, eine Tastatur und eine Braillezeile."}
+::image[Screenreader und Braillezeile am Arbeitsplatz.]{#asbz6vfv src=braille-workplace.jpg alt="Eine Frau mit Kopfhörern um den Hals hält ein Smartphone ans Ohr. Vor ihr stehen ein Bildschirm, eine Tastatur und eine Braillezeile."}
 
-:::key-point
+:::key-point{#5uozerz7}
 
 Was Sehende an Form und Position ablesen, muss ein Screenreader benennen können. Das gelingt nur, wenn der Inhalt dafür vorbereitet ist.
 
@@ -63,10 +69,10 @@ Was Sehende an Form und Position ablesen, muss ein Screenreader benennen können
 
 Wie sicher fühlst du dich darin, Barrieren für blinde Menschen zu erkennen?
 
-1. unsicher
-2. eher unsicher
-3. eher sicher
-4. sicher
+1. unsicher {#4s3i8s2c}
+2. eher unsicher {#cqw933nd}
+3. eher sicher {#bpfpjbqe}
+4. sicher {#8kvok9at}
 
 :::
 
@@ -74,9 +80,9 @@ Wie sicher fühlst du dich darin, Barrieren für blinde Menschen zu erkennen?
 
 Eine Schaltfläche zeigt nur ein Lupensymbol. Was braucht Lakshmi, damit sie weiß, wofür die Schaltfläche gedacht ist?
 
-- [ ] Eine größere Lupe
-- [x] Eine Textalternative wie „Suchen“
-- [ ] Eine andere Farbe
+- [ ] Eine größere Lupe {#ugowxmy2}
+- [x] Eine Textalternative wie „Suchen“ {#0dg9zoic}
+- [ ] Eine andere Farbe {#fhmk1v7d}
 
 ---
 

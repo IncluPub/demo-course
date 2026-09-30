@@ -12,9 +12,9 @@ Diese Kontrolle hat vier Aufgaben. Du bestehst sie mit mindestens 80 Prozent der
 
 Eine Behörde stellt ein Formular nur als eingescanntes Bild bereit. Ein Screenreader kann es nicht vorlesen. Welches Kriterium ist am deutlichsten verletzt?
 
-- [ ] Nutzung in der allgemein üblichen Weise
-- [x] Nutzung grundsätzlich ohne fremde Hilfe
-- [ ] Keines, das Formular ist ja vorhanden
+- [ ] Nutzung in der allgemein üblichen Weise {#y137yhzw}
+- [x] Nutzung grundsätzlich ohne fremde Hilfe {#bymxmphd}
+- [ ] Keines, das Formular ist ja vorhanden {#ube1qv10}
 
 ---
 
@@ -22,14 +22,14 @@ Wer das Formular nicht selbst lesen kann, braucht Hilfe von anderen. Auch die ü
 
 :::
 
-:::question[Aufgabe 2]{#beneficiaries interaction=multiple-choice objectives=modules/definition/module.yaml#definition}
+:::question[Aufgabe 2]{#beneficiaries-task interaction=multiple-choice objectives=modules/definition/module.yaml#definition}
 
 Wer profitiert von barrierefreien Lösungen? Wähle alle zutreffenden aus.
 
-- [x] Ältere Menschen
-- [x] Eltern mit Kinderwagen
-- [x] Menschen mit vorübergehenden Einschränkungen
-- [ ] Nur Menschen mit Schwerbehindertenausweis
+- [x] Ältere Menschen {#mn7wek1y}
+- [x] Eltern mit Kinderwagen {#hgnejrl1}
+- [x] Menschen mit vorübergehenden Einschränkungen {#ojj4aj8k}
+- [ ] Nur Menschen mit Schwerbehindertenausweis {#iu8fgo8c}
 
 ---
 
@@ -37,7 +37,7 @@ Barrierefreiheit hilft weit mehr Menschen als denen mit amtlich anerkannter Behi
 
 :::
 
-:::::variant-group[Aufgabe 3: Kriterien erkennen]{#criteria objectives=modules/definition/module.yaml#criteria}
+:::::variant-group[Aufgabe 3: Kriterien erkennen]{#criteria-group objectives=modules/definition/module.yaml#criteria}
 
 ::::variant[Als Zuordnung]{#matching}
 
@@ -45,9 +45,9 @@ Barrierefreiheit hilft weit mehr Menschen als denen mit amtlich anerkannter Behi
 
 Ordne jedem Beispiel das Kriterium zu, das es verletzt.
 
-- Bestellung nur per Telefon mit Hilfe einer anderen Person -> grundsätzlich ohne fremde Hilfe
-- Ein Antrag ist nur nach langer Suche in einem Archiv zu finden und dann schwer zu bedienen -> ohne besondere Erschwernis
-- Menschen im Rollstuhl müssen den Lieferanteneingang benutzen -> in der allgemein üblichen Weise
+- Bestellung nur per Telefon mit Hilfe einer anderen Person {#uhdb5w5y} -> grundsätzlich ohne fremde Hilfe {#dgzvoj8i}
+- Ein Antrag ist nur nach langer Suche in einem Archiv zu finden und dann schwer zu bedienen {#1nzvb9z3} -> ohne besondere Erschwernis {#zayd017f}
+- Menschen im Rollstuhl müssen den Lieferanteneingang benutzen {#emcccmvl} -> in der allgemein üblichen Weise {#6mocd63c}
 
 :::
 
@@ -59,10 +59,10 @@ Ordne jedem Beispiel das Kriterium zu, das es verletzt.
 
 Welche drei Kriterien nennt § 4 BGG? Wähle alle zutreffenden aus.
 
-- [x] in der allgemein üblichen Weise
-- [x] ohne besondere Erschwernis
-- [x] grundsätzlich ohne fremde Hilfe
-- [ ] kostenlos
+- [x] in der allgemein üblichen Weise {#te0i5dgu}
+- [x] ohne besondere Erschwernis {#nf7lfg87}
+- [x] grundsätzlich ohne fremde Hilfe {#9b7vwagk}
+- [ ] kostenlos {#mcekctcr}
 
 :::
 
@@ -74,9 +74,9 @@ Welche drei Kriterien nennt § 4 BGG? Wähle alle zutreffenden aus.
 
 Bringe die Schritte in eine sinnvolle Reihenfolge: Wie entsteht ein barrierefreies Angebot?
 
-1. Barrierefreiheit von Anfang an einplanen
-2. Barrierefrei gestalten und umsetzen
-3. Mit Menschen mit Behinderungen testen
+1. Barrierefreiheit von Anfang an einplanen {#dzyrntax}
+2. Barrierefrei gestalten und umsetzen {#gz1asp1b}
+3. Mit Menschen mit Behinderungen testen {#lmjyvgfa}
 
 ---
 

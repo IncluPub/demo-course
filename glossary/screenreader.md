@@ -11,6 +11,6 @@ Ein Screenreader ist ein Programm. Es liest vor, was auf dem Bildschirm steht.
 
 :::
 
-::spoken[Gesprochene Erklärung (Platzhalter mit synthetischer Stimme)]{src=screenreader-spoken.mp3}
+::spoken[Gesprochene Erklärung (Platzhalter mit synthetischer Stimme)]{#z0ikmlue src=screenreader-spoken.mp3}
 
-::sign-language[Erklärung in Deutscher Gebärdensprache (Platzhalter)]{src=screenreader-sign-language.mp4}
+::sign-language[Erklärung in Deutscher Gebärdensprache (Platzhalter)]{#zpbe2r41 src=screenreader-sign-language.mp4}

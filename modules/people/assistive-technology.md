@@ -11,19 +11,23 @@ objectives:
     level: 2
 ---
 
-::persona{ref=personas/lakshmi.md form=short}
+::persona{#d0i8ajki ref=personas/lakshmi.md form=short}
+
+{#tez2zs78}
 
 ## Screenreader
 
 Ein [Screenreader](../../glossary/screenreader.md) liest die Inhalte des Bildschirms als synthetische Sprache vor. Er sagt nicht nur „Suchen“, sondern „Suchen, Schaltfläche“, nicht nur „Kundenkonto“, sondern „Kundenkonto, Überschrift Ebene 2“. So weiß Lakshmi bei jedem Element, was es ist und wie sie damit umgehen kann. Fehlt diese Auszeichnung, erfährt sie nicht mehr, worum es sich handelt, und kann nicht mehr gezielt springen.
 
-::image[Braillezeile mit Tastatur.]{src=braille-display.jpg alt="Hände auf einer Braillezeile vor einer Computertastatur"}
+::image[Braillezeile mit Tastatur.]{#9tqzgtb8 src=braille-display.jpg alt="Hände auf einer Braillezeile vor einer Computertastatur"}
+
+{#31lmd414}
 
 ## Braillezeile
 
 Eine [Braillezeile](../../glossary/braille-display.md) setzt den Bildschirminhalt in tastbare Brailleschrift um. Viele blinde Menschen nutzen sie zusammen mit dem Screenreader: Die Sprachausgabe gibt schnellen Überblick, die Braillezeile erlaubt genaues Lesen, auch dort, wo Sprachausgabe stören würde.
 
-::::do-dont[Was Inhalte leisten müssen]
+::::do-dont[Was Inhalte leisten müssen]{#mmvcroft}
 
 :::do
 
@@ -43,18 +47,18 @@ Eine [Braillezeile](../../glossary/braille-display.md) setzt den Bildschirminhal
 
 ::::
 
-:::did-you-know
+:::did-you-know{#sw7dpmlj}
 
 Auf dem Smartphone bedienen Screenreader-Nutzende ihr Gerät mit eigenen Gesten: Wischen nach rechts springt zum nächsten Element, doppeltes Tippen aktiviert es.
 
 :::
 
-:::question[Übung: Hilfsmittel zuordnen]{#matching interaction=matching}
+:::question[Übung: Hilfsmittel zuordnen]{#aids-matching interaction=matching}
 
 Ordne jedem Hilfsmittel seine Beschreibung zu.
 
-- Screenreader -> gibt Inhalte als synthetische Sprache aus
-- Braillezeile -> gibt Inhalte als tastbare Schrift aus
-- Vergrößerungssoftware -> vergrößert den gesamten Bildschirminhalt
+- Screenreader {#e2xzf8gw} -> gibt Inhalte als synthetische Sprache aus {#htplope2}
+- Braillezeile {#iy224xur} -> gibt Inhalte als tastbare Schrift aus {#elzchpc4}
+- Vergrößerungssoftware {#wkmcqm0y} -> vergrößert den gesamten Bildschirminhalt {#837445gp}
 
 :::

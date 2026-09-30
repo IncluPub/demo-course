@@ -3,21 +3,25 @@ id: 33a146f7-d2a8-4a64-9d49-9077a0f75d0e
 title: Gesetzliche Definition
 duration: PT15M
 objectives:
-  - key: criteria
+  - key: legal-criteria
     text: die gesetzliche Definition von Barrierefreiheit nach § 4 BGG in eigenen Worten erläutern und die drei darin enthaltenen Kriterien nennen.
     level: 2
-  - key: example
+  - key: legal-example
     text: an einem Beispiel zeigen, welches der Kriterien ein Angebot verletzt.
     level: 2
 ---
 
+{#ha7lcdpx}
+
 Die gesetzliche Grundlage für Barrierefreiheit in Deutschland findet sich im Behindertengleichstellungsgesetz (BGG). Das Gesetz definiert in [§ 4 BGG](../../glossary/bgg.md), was unter Barrierefreiheit zu verstehen ist:
 
-:::quote[§ 4 [Behindertengleichstellungsgesetz](https://www.gesetze-im-internet.de/bgg/__4.html)]
+:::quote[§ 4 [Behindertengleichstellungsgesetz](https://www.gesetze-im-internet.de/bgg/__4.html)]{#cbfakjqi}
 
 Barrierefrei sind bauliche und sonstige Anlagen, Verkehrsmittel, technische Gebrauchsgegenstände, Systeme der Informationsverarbeitung, akustische und visuelle Informationsquellen und Kommunikationseinrichtungen sowie andere gestaltete Lebensbereiche, wenn sie für Menschen mit Behinderungen in der allgemein üblichen Weise, ohne besondere Erschwernis und grundsätzlich ohne fremde Hilfe auffindbar, zugänglich und nutzbar sind. Hierbei ist die Nutzung behinderungsbedingt notwendiger Hilfsmittel zulässig.
 
 :::
+
+{#usvuk9ea}
 
 Diese Definition hebt drei zentrale Kriterien hervor:
 
@@ -25,7 +29,7 @@ Diese Definition hebt drei zentrale Kriterien hervor:
 2. **Ohne besondere Erschwernis:** Die Nutzung darf nicht mit zusätzlichen Hindernissen oder übermäßigen Anstrengungen verbunden sein.
 3. **Grundsätzlich ohne fremde Hilfe:** Menschen sollen Angebote und Räume eigenständig nutzen können.
 
-:::definition
+:::definition{#1r7voygv}
 
 :dfn[Barrierefreiheitsstärkungsgesetz] (BFSG): Gesetz, das seit 2025 auch Teile der Privatwirtschaft zu Barrierefreiheit verpflichtet, etwa Online-Shops, E-Books und Geldautomaten. Es übernimmt die Definition des BGG.
 
@@ -35,10 +39,10 @@ Diese Definition hebt drei zentrale Kriterien hervor:
 
 Ein Online-Shop ist nicht barrierefrei. Als Ersatz bietet er eine telefonische Bestellhotline an. Welches Kriterium des § 4 BGG wird dadurch am deutlichsten verletzt?
 
-- [ ] Auffindbarkeit
-- [ ] Nutzung in der allgemein üblichen Weise
-- [x] Nutzung grundsätzlich ohne fremde Hilfe
-- [ ] Nutzung ohne besondere Erschwernis
+- [ ] Auffindbarkeit {#javtf8g7}
+- [ ] Nutzung in der allgemein üblichen Weise {#rr6eg7mv}
+- [x] Nutzung grundsätzlich ohne fremde Hilfe {#jburd879}
+- [ ] Nutzung ohne besondere Erschwernis {#xcxcwknj}
 
 ---
 
@@ -48,6 +52,6 @@ Wer telefonisch bestellen muss, ist auf eine andere Person angewiesen. Genau das
 
 :::question[Übung: Die drei Kriterien]{#gaps interaction=text-entry}
 
-Ergänze die Kriterien: Barrierefrei ist, was Menschen mit Behinderungen in der allgemein :gap[üblichen] Weise, ohne besondere :gap[Erschwernis] und grundsätzlich ohne fremde :gap[Hilfe] nutzen können.
+Ergänze die Kriterien: Barrierefrei ist, was Menschen mit Behinderungen in der allgemein :gap[üblichen]{#2bs8mm07} Weise, ohne besondere :gap[Erschwernis]{#b37tzzkh} und grundsätzlich ohne fremde :gap[Hilfe]{#5y02jvp6} nutzen können.
 
 :::

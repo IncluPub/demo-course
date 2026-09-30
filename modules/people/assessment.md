@@ -11,9 +11,9 @@ Diese Kontrolle hat zwei Aufgaben. Du bestehst sie mit mindestens 80 Prozent der
 
 Warum konnte Lakshmi einige Eingabefelder nicht ausfüllen?
 
-- [x] Der Screenreader las die Beschriftungen nicht vor, weil sie nicht ausgezeichnet waren
-- [ ] Die Felder waren zu klein
-- [ ] Die Anwendung war zu langsam
+- [x] Der Screenreader las die Beschriftungen nicht vor, weil sie nicht ausgezeichnet waren {#zeyd733s}
+- [ ] Die Felder waren zu klein {#m3v4ffbp}
+- [ ] Die Anwendung war zu langsam {#eov11jb1}
 
 :::
 
@@ -21,8 +21,8 @@ Warum konnte Lakshmi einige Eingabefelder nicht ausfüllen?
 
 Was gibt ein Screenreader bei einer Schaltfläche aus? Wähle alle zutreffenden aus.
 
-- [x] Ihren Namen, zum Beispiel „Suchen“
-- [x] Ihre Rolle, also „Schaltfläche“
-- [ ] Ihre Farbe
+- [x] Ihren Namen, zum Beispiel „Suchen“ {#zaco07sl}
+- [x] Ihre Rolle, also „Schaltfläche“ {#f81bk019}
+- [ ] Ihre Farbe {#z3krrhon}
 
 :::

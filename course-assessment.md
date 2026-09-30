@@ -15,9 +15,9 @@ Diese Kontrolle hat zwei Aufgaben. Du bestehst sie, wenn du beide richtig beantw
 
 Welche Aussage beschreibt Barrierefreiheit am besten?
 
-- [ ] Eine Sonderlösung für Menschen mit Behinderungen
-- [x] Eine Gestaltung, die möglichst allen die selbstständige Nutzung ermöglicht
-- [ ] Eine technische Vorgabe ohne Bezug zur Teilhabe
+- [ ] Eine Sonderlösung für Menschen mit Behinderungen {#6pbbgs6k}
+- [x] Eine Gestaltung, die möglichst allen die selbstständige Nutzung ermöglicht {#i9i2xctm}
+- [ ] Eine technische Vorgabe ohne Bezug zur Teilhabe {#k1gpvb7k}
 
 ---
 
@@ -29,10 +29,10 @@ Barrierefreiheit zielt auf gleichwertige, selbstständige Nutzung für möglichs
 
 Welche Hilfsmittel nutzen blinde Menschen typischerweise? Wähle alle zutreffenden aus.
 
-- [x] Screenreader
-- [x] Braillezeile
-- [ ] Untertitel
-- [x] Tastatur statt Maus
+- [x] Screenreader {#efwc8wnt}
+- [x] Braillezeile {#enuamxrp}
+- [ ] Untertitel {#mayyk18z}
+- [x] Tastatur statt Maus {#qyyhulq8}
 
 ---
 
