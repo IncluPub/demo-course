@@ -20,7 +20,7 @@ The [source specification](https://code.tollwerk.net/inclupub/inclupub/-/blob/ma
 
 ## Build
 
-The pipeline validates the source and builds the package on every commit; the package is an artifact of the pipeline, not part of the repository. The units are narrated with the default voice of the compiler, which the pipeline loads with its job token; this project is in the job token allowlist of [`inclupub/voice`](https://code.tollwerk.net/inclupub/voice). The job `inclupub:check` checks it with the checker of the specification and EPUBCheck. A tag `v<version>` publishes the package to the package registry of this project.
+The pipeline validates the source and builds the package on every commit; the package is an artifact of the pipeline, not part of the repository. The units are narrated with the default voice of the compiler, which the pipeline loads with its job token; this project is in the job token allowlist of [`inclupub/voice`](https://code.tollwerk.net/inclupub/voice). With the base address for media of the group, `INCLUPUB_MEDIA_BASE`, the pipeline also builds the package with external media, whose video and audio files are delivered from the media storage of the tollwerk Academy. The job `inclupub:check` checks both packages with the validation of the IncluPub library and EPUBCheck. A tag `v<version>` first transfers the external files that are not in the media storage yet and then publishes both packages to the package registry of this project. The access to the media storage is in protected CI/CD variables of the group, so the tags `v*` of this project are protected.
 
 Locally, with the image of the compiler:
 
