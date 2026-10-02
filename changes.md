@@ -1,3 +1,10 @@
+## 1.4.0 (2026-10-02)
+
+### Neu
+
+- Der ganze Kurs wird vorgelesen, auch Titelseite, Impressum, Inhaltsverzeichnis, Glossar, Versionsgeschichte, Tests und Lösungen.
+- Beim Vorlesen werden Bilder, Videos und Audios angesagt: Bilder mit „Grafik:“ vor ihrem Alternativtext, Videos und Audios mit ihrer Bildunterschrift.
+
 ## 1.3.0 (2026-10-01)
 
 ### Neu
