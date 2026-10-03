@@ -39,3 +39,7 @@ docker run --rm -v "$PWD:/builds" -e INCLUPUB_VOICE_TOKEN images.tollwerk.net/in
 ```
 
 The skeleton of this repository was created with `inclupub new`.
+
+## License
+
+The demo course is licensed under CC BY 4.0, except two photos that keep their own free licenses. See [LICENSE.md](LICENSE.md).

@@ -57,7 +57,7 @@ Manche Knöpfe haben keinen Namen. Dann weiß Lakshmi nicht, was der Knopf macht
 
 **Blinde Menschen** greifen mithilfe eines Screenreaders auf Webinhalte zu, häufig kombiniert mit einer [Braillezeile](../../glossary/braille-display.md). Damit das funktioniert, müssen Inhalte durch eine logische Überschriftenstruktur gegliedert, Bilder mit Alternativtexten beschrieben und Bedienelemente eindeutig benannt sein.
 
-::image[Screenreader und Braillezeile am Arbeitsplatz.]{#asbz6vfv src=braille-workplace.jpg alt="Eine Frau mit Kopfhörern um den Hals hält ein Smartphone ans Ohr. Vor ihr stehen ein Bildschirm, eine Tastatur und eine Braillezeile."}
+::image[Screenreader und Braillezeile am Arbeitsplatz.]{#asbz6vfv src=braille-workplace.jpg alt="Eine Frau sitzt an einem Tisch vor ihrem Laptop und liest mit den Fingern auf einer Braillezeile."}
 
 :::key-point{#5uozerz7}
 

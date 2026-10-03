@@ -5,7 +5,7 @@ language: de
 description: Demokurs zum Erproben des Kursformats, mit Inhalten aus dem Kurs „Einführung in die Barrierefreiheit“.
 level: introductory
 version: 1.5.0
-license: proprietary
+license: https://creativecommons.org/licenses/by/4.0/
 authors:
   - tollwerk Academy
 publisher: tollwerk GmbH
