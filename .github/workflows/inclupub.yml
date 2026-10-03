@@ -1,0 +1,218 @@
+# Workflow for GitHub Actions of the repositories of IncluPub publications at GitHub, courses and books alike, the
+# counterpart of the CI/CD component publication.yml: build the package of the publication from its source and check
+# it on every push and, on tags v<version>, transfer the external media to the media storage and publish both
+# packages as a release of the repository. A tag is published only if the publication has the version of the tag and
+# an entry for it in changes.md.
+#
+# The workflow is a template: it is copied to .github/workflows/inclupub.yml of a repository from the tag of a
+# release of the compiler, and INCLUPUB_VERSION below is set to the version of that release, without the v. An update
+# replaces the file with the template of a newer release. The settings under "Inputs" are the inputs of the CI/CD
+# component; everything below them stays as it is.
+#
+# The images come from the private registry images.tollwerk.net. The workflow logs in with the group deploy token of
+# the publisher in the secrets INCLUPUB_REGISTRY_USER and INCLUPUB_REGISTRY_TOKEN, of the repository or the
+# organization; the same token loads voices from code.tollwerk.net, such as the default voice.
+# Settings of a publisher come from secrets and variables, for example of the organization: INCLUPUB_MEDIA_BASE builds
+# the package with external media as well, which is published after its files are transferred to the media storage of
+# INCLUPUB_MEDIA_STORAGE with the password of INCLUPUB_MEDIA_PASSWORD. These three are secrets of the environment
+# inclupub, whose deployment rule admits only tags v*, so they reach only the jobs of such tags; INCLUPUB_MEDIA_BASE
+# may also be a variable of the repository or the organization, so that every push builds and checks the package with
+# external media. The variable INCLUPUB_NOTIFY_URL is called after publishing with repository, slug and version, and
+# the variables INCLUPUB_VOICE with INCLUPUB_VOICE_SHA256 set the voice of the narration instead of the default voice.
+# Narrated sentences and the voice are kept in the cache of the workflow.
+
+name: IncluPub
+
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "v*"
+
+env:
+  # Inputs
+  # Folder of the source, relative to the repository
+  INCLUPUB_SOURCE: .
+  # Version of the images of the compiler, the version of the release this file was taken from
+  INCLUPUB_VERSION: 0.11.0
+  # Name of the release files of the package
+  INCLUPUB_SLUG: ${{ github.event.repository.name }}
+  # Whether tags v<version> publish the package
+  INCLUPUB_PUBLISH: "true"
+  # Whether the documents are narrated
+  INCLUPUB_NARRATE: "true"
+  # Address of the Piper model of the voice, instead of the variable INCLUPUB_VOICE or the default voice
+  INCLUPUB_PUBLICATION_VOICE: ""
+  # Checksums of model and configuration of the voice, instead of the variable INCLUPUB_VOICE_SHA256
+  INCLUPUB_PUBLICATION_VOICE_SHA256: ""
+
+  # Fixed settings
+  INCLUPUB_IMAGE: images.tollwerk.net/inclupub/compiler
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    # The secrets of the media storage reach only tags v*, through the deployment rule of the environment
+    environment: ${{ startsWith(github.ref, 'refs/tags/v') && 'inclupub' || '' }}
+    outputs:
+      release: ${{ steps.build.outputs.release }}
+    steps:
+      # The time of modification is the time of the commit; a shallow clone knows it. Media are in Git LFS.
+      - name: Check out the source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          lfs: true
+          persist-credentials: false
+      - name: Restore the cache of narration
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .inclupub-cache/
+          key: inclupub-narration-${{ github.run_id }}
+          restore-keys: inclupub-narration-
+      - name: Log in to the registry
+        env:
+          INCLUPUB_REGISTRY_USER: ${{ secrets.INCLUPUB_REGISTRY_USER }}
+          INCLUPUB_REGISTRY_TOKEN: ${{ secrets.INCLUPUB_REGISTRY_TOKEN }}
+        run: |
+          printf '%s' "${INCLUPUB_REGISTRY_TOKEN}" \
+            | docker login images.tollwerk.net --username "${INCLUPUB_REGISTRY_USER}" --password-stdin
+      # Stops with the errors of the source; builds the package with external media as well if INCLUPUB_MEDIA_BASE is
+      # set. The packages go into .inclupub, which is not part of the source even when the source is the whole
+      # repository. On a tag that the job publish publishes, the build is a release: it fails if the publication is
+      # a draft, without an entry for its version in changes.md, or if its version differs from the tag, so that nothing
+      # is published
+      - name: Build the package
+        id: build
+        env:
+          INCLUPUB_MEDIA_BASE: ${{ secrets.INCLUPUB_MEDIA_BASE || vars.INCLUPUB_MEDIA_BASE }}
+          INCLUPUB_VOICE: ${{ vars.INCLUPUB_VOICE }}
+          INCLUPUB_VOICE_SHA256: ${{ vars.INCLUPUB_VOICE_SHA256 }}
+          INCLUPUB_REGISTRY_TOKEN: ${{ secrets.INCLUPUB_REGISTRY_TOKEN }}
+        run: |
+          if [ -n "${INCLUPUB_PUBLICATION_VOICE}" ]; then
+            export INCLUPUB_VOICE="${INCLUPUB_PUBLICATION_VOICE}"
+            export INCLUPUB_VOICE_SHA256="${INCLUPUB_PUBLICATION_VOICE_SHA256}"
+          fi
+          # The deploy token of the registry loads the voice from code.tollwerk.net, such as the default voice, and is
+          # sent to no other address
+          case "${INCLUPUB_VOICE:-https://code.tollwerk.net/}" in
+            https://code.tollwerk.net/*) export INCLUPUB_VOICE_DEPLOY_TOKEN="${INCLUPUB_REGISTRY_TOKEN}" ;;
+          esac
+          mkdir -p .inclupub .inclupub-cache
+          set -- "${INCLUPUB_SOURCE}" --output ".inclupub/${INCLUPUB_SLUG}.epub"
+          if [ "${INCLUPUB_PUBLISH}" = "true" ] && [ "${GITHUB_REF_TYPE}" = "tag" ] \
+            && printf '%s\n' "${GITHUB_REF_NAME}" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+$'; then
+            set -- "$@" --release "${GITHUB_REF_NAME#v}"
+            echo "release=${GITHUB_REF_NAME#v}" >> "${GITHUB_OUTPUT}"
+          fi
+          docker run --rm --user "$(id -u):$(id -g)" --env HOME=/tmp --volume "${PWD}:/builds" \
+            --env INCLUPUB_MEDIA_BASE --env INCLUPUB_NARRATE --env INCLUPUB_CACHE=/builds/.inclupub-cache \
+            --env INCLUPUB_VOICE --env INCLUPUB_VOICE_SHA256 --env INCLUPUB_VOICE_DEPLOY_TOKEN \
+            "${INCLUPUB_IMAGE}:${INCLUPUB_VERSION}" inclupub build "$@"
+      - name: Keep the packages
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: inclupub
+          path: .inclupub/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      - name: Fetch the packages
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: inclupub
+          path: .inclupub
+      - name: Log in to the registry
+        env:
+          INCLUPUB_REGISTRY_USER: ${{ secrets.INCLUPUB_REGISTRY_USER }}
+          INCLUPUB_REGISTRY_TOKEN: ${{ secrets.INCLUPUB_REGISTRY_TOKEN }}
+        run: |
+          printf '%s' "${INCLUPUB_REGISTRY_TOKEN}" \
+            | docker login images.tollwerk.net --username "${INCLUPUB_REGISTRY_USER}" --password-stdin
+      - name: Check the packages
+        run: |
+          docker run --rm --user "$(id -u):$(id -g)" --env HOME=/tmp --volume "${PWD}:/builds" \
+            "${INCLUPUB_IMAGE}/check:${INCLUPUB_VERSION}" inclupub-check ".inclupub/${INCLUPUB_SLUG}"*.epub
+      - name: Keep the reports of Ace
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: inclupub-ace
+          path: .inclupub/*.ace/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
+
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    needs:
+      - build
+      - check
+    if: needs.build.outputs.release != ''
+    # The secrets of the media storage reach only tags v*, through the deployment rule of the environment
+    environment: inclupub
+    permissions:
+      contents: write
+    steps:
+      - name: Fetch the packages
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: inclupub
+          path: .inclupub
+      - name: Log in to the registry
+        env:
+          INCLUPUB_REGISTRY_USER: ${{ secrets.INCLUPUB_REGISTRY_USER }}
+          INCLUPUB_REGISTRY_TOKEN: ${{ secrets.INCLUPUB_REGISTRY_TOKEN }}
+        run: |
+          printf '%s' "${INCLUPUB_REGISTRY_TOKEN}" \
+            | docker login images.tollwerk.net --username "${INCLUPUB_REGISTRY_USER}" --password-stdin
+      # The external files go to the media storage first, so that no published package references a missing file;
+      # without a storage, the job fails instead of publishing only one of the packages
+      - name: Transfer the external media
+        env:
+          INCLUPUB_MEDIA_STORAGE: ${{ secrets.INCLUPUB_MEDIA_STORAGE }}
+          INCLUPUB_MEDIA_PASSWORD: ${{ secrets.INCLUPUB_MEDIA_PASSWORD }}
+        run: |
+          if [ -f ".inclupub/${INCLUPUB_SLUG}.external.epub" ]; then
+            docker run --rm --user "$(id -u):$(id -g)" --env HOME=/tmp --volume "${PWD}:/builds" \
+              --env INCLUPUB_MEDIA_STORAGE --env INCLUPUB_MEDIA_PASSWORD \
+              "${INCLUPUB_IMAGE}:${INCLUPUB_VERSION}" inclupub upload ".inclupub/${INCLUPUB_SLUG}.external"
+          fi
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ needs.build.outputs.release }}
+        run: |
+          PACKAGE=".inclupub/${INCLUPUB_SLUG}"
+          mkdir -p .inclupub-release
+          cp "${PACKAGE}.epub" ".inclupub-release/${INCLUPUB_SLUG}-${VERSION}.epub"
+          set -- ".inclupub-release/${INCLUPUB_SLUG}-${VERSION}.epub"
+          if [ -f "${PACKAGE}.external.epub" ]; then
+            cp "${PACKAGE}.external.epub" ".inclupub-release/${INCLUPUB_SLUG}-${VERSION}.external.epub"
+            set -- "$@" ".inclupub-release/${INCLUPUB_SLUG}-${VERSION}.external.epub"
+          fi
+          gh release create "${GITHUB_REF_NAME}" --repo "${GITHUB_REPOSITORY}" --verify-tag \
+            --title "${INCLUPUB_SLUG} ${VERSION}" --notes "Version ${VERSION}, built by IncluPub." "$@"
+      - name: Notify the importer
+        env:
+          INCLUPUB_NOTIFY_URL: ${{ vars.INCLUPUB_NOTIFY_URL }}
+          VERSION: ${{ needs.build.outputs.release }}
+        run: |
+          if [ -n "${INCLUPUB_NOTIFY_URL}" ]; then
+            curl --fail-with-body --silent --show-error --request POST --header "Content-Type: application/json" \
+              --data "{\"project\":\"${GITHUB_REPOSITORY}\",\"slug\":\"${INCLUPUB_SLUG}\",\"version\":\"${VERSION}\"}" \
+              "${INCLUPUB_NOTIFY_URL}"
+          fi
