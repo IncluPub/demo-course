@@ -1,3 +1,19 @@
+## 1.6.0 (2026-10-03)
+
+### Neu
+
+- Das Inhaltsverzeichnis ist eine eigene Seite nach dem Impressum und wird vorgelesen.
+- Die Kursbeschreibung steht am Anfang, vor der Kurseinführung.
+
+### Geändert
+
+- Die Beschriftungen von Kästen wie „Merke“ sind sichtbarer Text und werden vorgelesen.
+- Bei Videos und Audios steht die Bildunterschrift direkt unter dem Medium, das Transkript danach; die Unterschrift wird nur einmal vorgelesen, in der Ansage des Mediums.
+- Das Impressum nennt die synthetische Stimme in der Zusammenfassung zur Barrierefreiheit.
+- Versionsnummern werden mit „Punkt“ vorgelesen.
+- Zwei freie Fotos ersetzen die bisherigen Stockfotos, und der Kurs steht unter der Lizenz CC BY 4.0.
+- Der Kurs wird mit dem Compiler 0.11.0 gebaut.
+
 ## 1.5.0 (2026-10-03)
 
 ### Neu
