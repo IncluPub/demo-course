@@ -12,9 +12,12 @@ The content comes from the [example course](https://code.tollwerk.net/inclupub/i
 | `course-intro.md`, `course-description.md` | course introduction and course description |
 | `course-assessment.md` | assessment at course level |
 | `modules/` | one folder per module with `module.yaml`, its introduction, lessons, summary and assessment |
+| `back/` | appendices at the end of the course, one file each, in the order of `course.yaml` |
 | `glossary/`, `personas/` | glossary entries and personas, one file each |
+| `bibliography.yaml` | references for the citations of the course, from which the bibliography is built |
 | `media/` | images, video and audio with captions, transcripts and properties; binary media in Git LFS |
 | `certificate.md`, `pronunciation.yaml` | certificate information and pronunciation lexicon |
+| `changes.md` | version history of the course |
 
 The [source specification](https://code.tollwerk.net/inclupub/inclupub/-/blob/main/spec/source.md) explains every file.
 

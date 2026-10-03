@@ -1,0 +1,52 @@
+references:
+  - id: bgg-2002
+    type: report
+    author:
+      - literal: Bundesministerium der Justiz
+    title: Gesetz zur Gleichstellung von Menschen mit Behinderungen (Behindertengleichstellungsgesetz – BGG)
+    publisher: Bundesministerium der Justiz
+    publisher-place: Berlin
+    issued:
+      date-parts:
+        - [2002, 4, 27]
+    accessed:
+      date-parts:
+        - [2026, 9, 1]
+    URL: https://www.gesetze-im-internet.de/bgg/
+  - id: mueller-2024
+    type: book
+    author:
+      - family: Müller
+        given: Anna
+    title: Barrierefreie Dokumente
+    edition: 2
+    publisher: Beispielverlag
+    publisher-place: Berlin
+    issued:
+      date-parts:
+        - [2024]
+  - id: wcag-22
+    type: webpage
+    author:
+      - literal: World Wide Web Consortium
+    title: Web Content Accessibility Guidelines (WCAG) 2.2
+    issued:
+      date-parts:
+        - [2023, 10, 5]
+    URL: https://www.w3.org/TR/WCAG22/
+  - id: schaefer-2025
+    type: article-journal
+    author:
+      - family: Schäfer
+        given: Anna-Lena
+      - family: Berg
+        given: Jonas
+        non-dropping-particle: van den
+    title: Screenreader im Arbeitsalltag
+    container-title: Beispieljournal für Teilhabe
+    volume: 20
+    issue: 3
+    page: 45–61
+    issued:
+      date-parts:
+        - [2025, 6]

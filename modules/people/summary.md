@@ -13,6 +13,7 @@ Behinderung entsteht dort, wo Umgebungen oder digitale Produkte Barrieren aufwei
 :::resources[Weiterführende Ressourcen]
 
 - [Stories of Web Users (W3C WAI, englisch)](https://www.w3.org/WAI/people-use-web/user-stories/)
+- Web Content Accessibility Guidelines (WCAG) 2.2 :cite{ref=bibliography.yaml#wcag-22}
 - [Browsing with a desktop screen reader (TetraLogical, englisch)](https://youtu.be/KuVKQQMtRRI)
 
 :::

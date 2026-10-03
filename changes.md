@@ -1,3 +1,17 @@
+## 1.5.0 (2026-10-03)
+
+### Neu
+
+- Ein Anhang am Ende des Kurses enthält eine Checkliste zum Mitnehmen.
+- Der Kurs gehört zur Reihe „Beispielreihe der tollwerk Academy“.
+- Fußnoten ergänzen einzelne Aussagen, ohne den Lesefluss zu unterbrechen.
+- Quellenangaben verweisen auf die verwendete Literatur, die ein Literaturverzeichnis am Ende vollständig aufführt.
+
+### Geändert
+
+- Der Kurs gibt die neue Adresse des Kursprofils an.
+- Der Kurs wird mit dem Compiler 0.9.0 gebaut.
+
 ## 1.4.0 (2026-10-02)
 
 ### Neu

@@ -4,7 +4,7 @@ title: "Demokurs: Einführung in die Barrierefreiheit"
 language: de
 description: Demokurs zum Erproben des Kursformats, mit Inhalten aus dem Kurs „Einführung in die Barrierefreiheit“.
 level: introductory
-version: 1.4.0
+version: 1.5.0
 license: proprietary
 authors:
   - tollwerk Academy
@@ -21,9 +21,16 @@ priorKnowledge: keine
 duration: PT1H30M
 accessibility:
   summary: Alle Inhalte sind als Text zugänglich. Bilder haben Alternativtexte, Grafiken ausführliche Beschreibungen, Videos Untertitel und Transkripte, Audio Transkripte. Einzelne Abschnitte gibt es zusätzlich als Video, Audio und in Leichter Sprache, Glossarbegriffe auch in Gebärdensprache.
+series:
+  name: Beispielreihe der tollwerk Academy
+  position: 1
+  issn: 2049-3630
+citationStyle: ieee
 message: Du hast den Demokurs abgeschlossen.
 modules:
   - definition
   - people
 assessments:
   - course-assessment
+back:
+  - checklist

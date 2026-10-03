@@ -13,7 +13,7 @@ objectives:
 
 {#ha7lcdpx}
 
-Die gesetzliche Grundlage für Barrierefreiheit in Deutschland findet sich im Behindertengleichstellungsgesetz (BGG). Das Gesetz definiert in [§ 4 BGG](../../glossary/bgg.md), was unter Barrierefreiheit zu verstehen ist:
+Die gesetzliche Grundlage für Barrierefreiheit in Deutschland findet sich im Behindertengleichstellungsgesetz (BGG).:footnote[In Kraft seit dem 1. Mai 2002, zuletzt grundlegend überarbeitet 2016 :cite{ref=bibliography.yaml#bgg-2002}.]{#bavj5s7g} Das Gesetz definiert in [§ 4 BGG](../../glossary/bgg.md), was unter Barrierefreiheit zu verstehen ist:
 
 :::quote[§ 4 [Behindertengleichstellungsgesetz](https://www.gesetze-im-internet.de/bgg/__4.html)]{#cbfakjqi}
 
@@ -23,7 +23,7 @@ Barrierefrei sind bauliche und sonstige Anlagen, Verkehrsmittel, technische Gebr
 
 {#usvuk9ea}
 
-Diese Definition hebt drei zentrale Kriterien hervor:
+Diese Definition hebt drei zentrale Kriterien hervor :cite[S. 4]{ref=bibliography.yaml#mueller-2024}:
 
 1. **Allgemein übliche Weise:** Menschen mit Behinderungen sollen Dinge auf die gleiche Art und Weise nutzen können, wie es allgemein üblich ist.
 2. **Ohne besondere Erschwernis:** Die Nutzung darf nicht mit zusätzlichen Hindernissen oder übermäßigen Anstrengungen verbunden sein.
@@ -37,7 +37,7 @@ Diese Definition hebt drei zentrale Kriterien hervor:
 
 :::question[Quiz]{#quiz interaction=single-choice}
 
-Ein Online-Shop ist nicht barrierefrei. Als Ersatz bietet er eine telefonische Bestellhotline an. Welches Kriterium des § 4 BGG wird dadurch am deutlichsten verletzt?
+Ein Online-Shop ist nicht barrierefrei. Als Ersatz bietet er eine telefonische Bestellhotline an.:footnote[Seit dem 28. Juni 2025 verpflichtet das Barrierefreiheitsstärkungsgesetz viele Online-Shops zur Barrierefreiheit.]{#y7tdb4yh} Welches Kriterium des § 4 BGG wird dadurch am deutlichsten verletzt?
 
 - [ ] Auffindbarkeit {#javtf8g7}
 - [ ] Nutzung in der allgemein üblichen Weise {#rr6eg7mv}

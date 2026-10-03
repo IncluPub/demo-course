@@ -17,7 +17,7 @@ objectives:
 
 ## Screenreader
 
-Ein [Screenreader](../../glossary/screenreader.md) liest die Inhalte des Bildschirms als synthetische Sprache vor. Er sagt nicht nur „Suchen“, sondern „Suchen, Schaltfläche“, nicht nur „Kundenkonto“, sondern „Kundenkonto, Überschrift Ebene 2“. So weiß Lakshmi bei jedem Element, was es ist und wie sie damit umgehen kann. Fehlt diese Auszeichnung, erfährt sie nicht mehr, worum es sich handelt, und kann nicht mehr gezielt springen.
+Ein [Screenreader](../../glossary/screenreader.md) liest die Inhalte des Bildschirms als synthetische Sprache vor :cite{ref=bibliography.yaml#schaefer-2025}. Er sagt nicht nur „Suchen“, sondern „Suchen, Schaltfläche“, nicht nur „Kundenkonto“, sondern „Kundenkonto, Überschrift Ebene 2“. So weiß Lakshmi bei jedem Element, was es ist und wie sie damit umgehen kann. Fehlt diese Auszeichnung, erfährt sie nicht mehr, worum es sich handelt, und kann nicht mehr gezielt springen.
 
 ::image[Braillezeile mit Tastatur.]{#9tqzgtb8 src=braille-display.jpg alt="Hände auf einer Braillezeile vor einer Computertastatur"}
 
