@@ -1,3 +1,14 @@
+## 1.7.0 (2026-10-04)
+
+### Neu
+
+- Das Impressum endet mit dem Zeichen von IncluPub und der Angabe, welchem Profil und welcher Version des Profils der Kurs entspricht.
+- Jede Version hat in GitLab eine eigene Release-Seite mit den Neuerungen der Version und den Paketen zum Herunterladen; auch die Release-Seite bei GitHub nennt die Neuerungen.
+
+### Geändert
+
+- Der Kurs wird mit dem Compiler 0.12.0 gebaut.
+
 ## 1.6.0 (2026-10-03)
 
 ### Neu

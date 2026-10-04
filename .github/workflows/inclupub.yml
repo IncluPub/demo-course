@@ -1,7 +1,7 @@
 # Workflow for GitHub Actions of the repositories of IncluPub publications at GitHub, courses and books alike, the
 # counterpart of the CI/CD component publication.yml: build the package of the publication from its source and check
 # it on every push and, on tags v<version>, transfer the external media to the media storage and publish both
-# packages as a release of the repository. A tag is published only if the publication has the version of the tag and
+# packages as a release of the repository, with the release notes of the version as its description. A tag is published only if the publication has the version of the tag and
 # an entry for it in changes.md.
 #
 # The workflow is a template: it is copied to .github/workflows/inclupub.yml of a repository from the tag of a
@@ -35,7 +35,7 @@ env:
   # Folder of the source, relative to the repository
   INCLUPUB_SOURCE: .
   # Version of the images of the compiler, the version of the release this file was taken from
-  INCLUPUB_VERSION: 0.11.0
+  INCLUPUB_VERSION: 0.12.0
   # Name of the release files of the package
   INCLUPUB_SLUG: ${{ github.event.repository.name }}
   # Whether tags v<version> publish the package
@@ -205,7 +205,7 @@ jobs:
             set -- "$@" ".inclupub-release/${INCLUPUB_SLUG}-${VERSION}.external.epub"
           fi
           gh release create "${GITHUB_REF_NAME}" --repo "${GITHUB_REPOSITORY}" --verify-tag \
-            --title "${INCLUPUB_SLUG} ${VERSION}" --notes "Version ${VERSION}, built by IncluPub." "$@"
+            --title "${INCLUPUB_SLUG} ${VERSION}" --notes-file "${PACKAGE}.notes.md" "$@"
       - name: Notify the importer
         env:
           INCLUPUB_NOTIFY_URL: ${{ vars.INCLUPUB_NOTIFY_URL }}

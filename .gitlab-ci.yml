@@ -1,5 +1,5 @@
 include:
-  - component: code.tollwerk.net/inclupub/compiler/publication@v0.11.0
+  - component: code.tollwerk.net/inclupub/compiler/publication@v0.12.0
     inputs:
-      version: 0.11.0
+      version: 0.12.0
       narrate: true
