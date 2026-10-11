@@ -1,3 +1,12 @@
+## 1.8.0 (2026-10-11)
+
+### Geändert
+
+- Die Wahllektion zum Farbsehen steht vor der Zusammenfassung ihres Moduls.
+- Das Inhaltsverzeichnis nennt Anhänge, Anmerkungen, Literaturverzeichnis, Glossar und Versionsgeschichte einzeln nach den Modulen, statt sie unter „Anhang“ zu sammeln.
+- Aufgaben in Lektionen sind Übungen ohne Punkte; nur die Lernerfolgskontrollen werden bewertet.
+- Der Kurs wird mit dem Compiler 0.13.0 gebaut.
+
 ## 1.7.0 (2026-10-04)
 
 ### Neu

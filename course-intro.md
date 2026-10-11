@@ -21,7 +21,7 @@ Du bestimmst das Tempo. Jede Lektion beginnt mit ihren Lernzielen. Am Ende jedes
 
 Mehr zum Kurs steht in der [Kursbeschreibung](course-description.md).
 
-:::note{#k99mlrep}
+:::remark{#k99mlrep}
 
 Dies ist ein Demokurs. Er dient dazu, den Entwurf des Kursformats zu erproben, und enthält Platzhalter für Audio, Video und Gebärdensprache.
 
