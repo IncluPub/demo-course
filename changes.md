@@ -1,3 +1,13 @@
+## 1.9.0 (2026-10-25)
+
+### Geändert
+
+- Die Übung „Die drei Kriterien“ bietet für jede Lücke drei Wörter zur Auswahl, statt die Antwort eintippen zu lassen.
+- Das Zitat aus dem Behindertengleichstellungsgesetz nennt das Gesetz im Literaturverzeichnis als seine Quelle.
+- Englische Titel und Namen sind als Englisch ausgezeichnet, damit die Sprachausgabe sie richtig ausspricht.
+- Hinweise sind keine eigenen Bereiche der Seite mehr, und ihre Beschriftung ist eine Überschrift.
+- Der Kurs wird mit dem Compiler 0.14.0 gebaut.
+
 ## 1.8.0 (2026-10-11)
 
 ### Geändert

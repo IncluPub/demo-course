@@ -5,7 +5,7 @@ role: Buchhalterin und blind
 image:
   src: lakshmi.png
   alt: Porträt von Lakshmi, einer Frau mit kurzen schwarzen Haaren vor rotem Hintergrund
-attribution: Adaptiert von „Lakshmi“ aus [„Stories of Web Users“ © W3C® Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/people-use-web/user-stories/story-three/).
+attribution: Adaptiert von „Lakshmi“ aus [„:lang[Stories of Web Users]{lang=en}“ © W3C® :lang[Web Accessibility Initiative]{lang=en} (WAI)](https://www.w3.org/WAI/people-use-web/user-stories/story-three/).
 ---
 
 Lakshmi ist 51 und arbeitet als leitende Buchhalterin in einer Versicherung. Sie ist blind. Bei der Arbeit nutzt sie webbasierte Anwendungen für Tabellenkalkulationen, Präsentationen und Dokumente. Ein [Screenreader](../glossary/screenreader.md) liest ihr den Inhalt und die Bedienelemente vor. Über die Tastatur navigiert sie durch die Anwendungen und gibt auch Texte und Daten ein.

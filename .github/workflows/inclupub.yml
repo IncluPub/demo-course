@@ -4,10 +4,11 @@
 # packages as a release of the repository, with the release notes of the version as its description. A tag is
 # published only if the publication has the version of the tag and an entry for it in changes.md.
 #
-# The workflow is a template: it is copied to .github/workflows/inclupub.yml of a repository from the tag of a
-# release of the compiler, and INCLUPUB_VERSION below is set to the version of that release, without the v. An update
-# replaces the file with the template of a newer release. The settings under "Inputs" are the inputs of the CI/CD
-# component; everything below them stays as it is.
+# The workflow is a template, which the library inclupub/php bundles: "inclupub github-workflow" of a release of the
+# compiler writes it to .github/workflows/inclupub.yml of a repository, as the editor and "inclupub new --host github"
+# do, with INCLUPUB_VERSION below set to the version of that release, without the v; it runs the images of compiler
+# 0.12.0 or later. An update writes the file again with a newer release and carries over the settings under "Inputs",
+# which are the inputs of the CI/CD component; everything below them stays as it is.
 #
 # The images come from the private registry images.tollwerk.net. The workflow logs in with the group deploy token of
 # the publisher in the secrets INCLUPUB_REGISTRY_USER and INCLUPUB_REGISTRY_TOKEN, of the repository or the
@@ -34,8 +35,8 @@ env:
   # Inputs
   # Folder of the source, relative to the repository
   INCLUPUB_SOURCE: .
-  # Version of the images of the compiler, the version of the release this file was taken from
-  INCLUPUB_VERSION: 0.13.0
+  # Version of the images of the compiler, the version of the release that wrote this file
+  INCLUPUB_VERSION: 0.14.0
   # Name of the release files of the package
   INCLUPUB_SLUG: ${{ github.event.repository.name }}
   # Whether tags v<version> publish the package
@@ -206,13 +207,15 @@ jobs:
           fi
           gh release create "${GITHUB_REF_NAME}" --repo "${GITHUB_REPOSITORY}" --verify-tag \
             --title "${INCLUPUB_SLUG} ${VERSION}" --notes-file "${PACKAGE}.notes.md" "$@"
+      # The body is encoded as JSON by jq, so that every slug gives valid JSON
       - name: Notify the importer
         env:
           INCLUPUB_NOTIFY_URL: ${{ vars.INCLUPUB_NOTIFY_URL }}
           VERSION: ${{ needs.build.outputs.release }}
         run: |
           if [ -n "${INCLUPUB_NOTIFY_URL}" ]; then
-            curl --fail-with-body --silent --show-error --request POST --header "Content-Type: application/json" \
-              --data "{\"project\":\"${GITHUB_REPOSITORY}\",\"slug\":\"${INCLUPUB_SLUG}\",\"version\":\"${VERSION}\"}" \
-              "${INCLUPUB_NOTIFY_URL}"
+            jq --null-input --compact-output \
+              '{project: env.GITHUB_REPOSITORY, slug: env.INCLUPUB_SLUG, version: env.VERSION}' \
+              | curl --fail-with-body --silent --show-error --request POST --header "Content-Type: application/json" \
+                --data @- "${INCLUPUB_NOTIFY_URL}"
           fi

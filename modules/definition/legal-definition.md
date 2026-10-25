@@ -15,7 +15,7 @@ objectives:
 
 Die gesetzliche Grundlage für Barrierefreiheit in Deutschland findet sich im Behindertengleichstellungsgesetz (BGG).:footnote[In Kraft seit dem 1. Mai 2002, zuletzt grundlegend überarbeitet 2016 :cite{ref=bibliography.yaml#bgg-2002}.]{#bavj5s7g} Das Gesetz definiert in [§ 4 BGG](../../glossary/bgg.md), was unter Barrierefreiheit zu verstehen ist:
 
-:::quote[§ 4 [Behindertengleichstellungsgesetz](https://www.gesetze-im-internet.de/bgg/__4.html)]{#cbfakjqi}
+:::quote{#cbfakjqi work=bibliography.yaml#bgg-2002 locator="§ 4"}
 
 Barrierefrei sind bauliche und sonstige Anlagen, Verkehrsmittel, technische Gebrauchsgegenstände, Systeme der Informationsverarbeitung, akustische und visuelle Informationsquellen und Kommunikationseinrichtungen sowie andere gestaltete Lebensbereiche, wenn sie für Menschen mit Behinderungen in der allgemein üblichen Weise, ohne besondere Erschwernis und grundsätzlich ohne fremde Hilfe auffindbar, zugänglich und nutzbar sind. Hierbei ist die Nutzung behinderungsbedingt notwendiger Hilfsmittel zulässig.
 
@@ -50,8 +50,8 @@ Wer telefonisch bestellen muss, ist auf eine andere Person angewiesen. Genau das
 
 :::
 
-:::question[Übung: Die drei Kriterien]{#gaps interaction=text-entry}
+:::question[Übung: Die drei Kriterien]{#gaps interaction=gap-choice}
 
-Ergänze die Kriterien: Barrierefrei ist, was Menschen mit Behinderungen in der allgemein :gap[üblichen]{#2bs8mm07} Weise, ohne besondere :gap[Erschwernis]{#b37tzzkh} und grundsätzlich ohne fremde :gap[Hilfe]{#5y02jvp6} nutzen können.
+Wähle die fehlenden Wörter der Kriterien: Barrierefrei ist, was Menschen mit Behinderungen in der allgemein :gap[gewohnten|=üblichen|eigenen]{#2bs8mm07} Weise, ohne besondere :gap[Mühe|Kosten|=Erschwernis]{#b37tzzkh} und grundsätzlich ohne fremde :gap[=Hilfe|Aufsicht|Technik]{#5y02jvp6} nutzen können.
 
 :::
